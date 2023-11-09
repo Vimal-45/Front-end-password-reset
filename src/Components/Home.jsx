@@ -14,7 +14,7 @@ const Home = () => {
             // console.log(token);
             const headers={
         Authorization : token,
-        'Content-Type':'application/json'
+       
      }
             
             if (!email ) {
