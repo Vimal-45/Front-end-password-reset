@@ -20,7 +20,7 @@ const Home = () => {
             if (!email ) {
                 navigate('/signin')
             }
-            axios.get('http://localhost:4000/api/user/getuser',{headers:headers})
+            axios.get('https://password-reset-5gb9.onrender.com/api/user/getuser',{headers:headers})
             .then(res => { setUser(res.data.userName)               
                
             })

@@ -39,7 +39,7 @@ const SetNewPassword = () => {
         } else {
         if(password !== confirmPassword){ alert('password not match') }
 
-        axios.post('http://localhost:4000/api/user/reset-password', { string: localString, password: confirmPassword })
+        axios.post('https://password-reset-5gb9.onrender.com/api/user/reset-password', { string: localString, password: confirmPassword })
         .then((res) => {
                 
                 if (res.data.message === 'password updated sucessfully') {

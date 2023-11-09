@@ -18,7 +18,7 @@ const ResetPassword = () => {
     const handleSubmit = () => {
         if (!email) { alert('please enter the valid email') }
         else {
-            axios.post('http://localhost:4000/api/user/forgot-password', { email: email })
+            axios.post('https://password-reset-5gb9.onrender.com/api/user/forgot-password', { email: email })
                 .then(res => {
 
                     localStorage.setItem('STRING', res.data.randomString);

@@ -16,7 +16,7 @@ const SignUp = () => {
 
     const handleSubmit = () => {
         console.log(email, password, name)
-        axios.post('http://localhost:4000/api/user/register', {
+        axios.post('https://password-reset-5gb9.onrender.com/api/user/register', {
                 email: email,
                 password: password,
                 Name : name
