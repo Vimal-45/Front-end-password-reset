@@ -60,7 +60,7 @@ const ResetPassword = () => {
                     className="btns">
                     SEND LINK </button> <br />
                 <Link style={{ textAlign: 'center', display: 'block', marginTop: '5px' }}
-                    to={'/signin'}> SIGN IN </Link>
+                    to={'/'}> SIGN IN </Link>
 
 
             </div>
