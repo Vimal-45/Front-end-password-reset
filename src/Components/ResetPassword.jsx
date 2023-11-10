@@ -24,8 +24,8 @@ const ResetPassword = () => {
                     localStorage.setItem('STRING', res.data.randomString);
                     localStorage.setItem('TOKEN', res.data.token);
                     alert(res.data.message)
-                    window.open("https://www.google.com/")
-                    window.close();
+                    // window.open("https://www.google.com/")
+                    // window.close();
 
 
 
