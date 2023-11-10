@@ -10,9 +10,12 @@ const SignIn = () => {
 
     useEffect(()=>{
         myRef.current.focus()
-        setTimeout(() => {            
-            localStorage.clear('STRING')           
-          }, 60000 );
+        if(localStorage){
+            setTimeout(() => {            
+                localStorage.clear           
+              }, 60000 );
+
+        }   
 
     },[])
 
