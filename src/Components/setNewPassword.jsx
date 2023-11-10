@@ -44,7 +44,7 @@ const SetNewPassword = () => {
                 
                 if (res.data.message === 'password updated sucessfully') {
                     localStorage.clear('STRING')
-                    navigate('/signin');
+                    navigate('/');
                     alert('Password Updated.');
 
                 } else {

@@ -19,7 +19,7 @@ const Home = () => {
      }
             
             if (!email ) {
-                navigate('/signin')
+                navigate('/')
             } else{
             axios.get('https://password-reset-5gb9.onrender.com/api/user/getuser',{headers:headers})
             .then(res => { setUser(res.data.userName)               
@@ -38,7 +38,7 @@ const Home = () => {
             <button
                 onClick={() => {
                     localStorage.clear()
-                    navigate('/signin')
+                    navigate('/')
                 }}
             > LOGOUT </button>
         </div>             
