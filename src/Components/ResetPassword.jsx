@@ -22,11 +22,12 @@ const ResetPassword = () => {
                 .then(res => {
 
                     localStorage.setItem('STRING', res.data.randomString);
-                    localStorage.setItem('TOKEN', res.data.token);
-                    alert(res.data.message)
-                    // window.open("https://www.google.com/")
+                    // localStorage.setItem('TOKEN', res.data.token);
+                    alert(res.data.message)                    
                     // window.close();
-
+                    setTimeout(() => {            
+                        localStorage.clear('STRING')           
+                      }, 60000 );
 
 
 
