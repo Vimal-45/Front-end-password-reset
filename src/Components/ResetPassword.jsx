@@ -28,7 +28,7 @@ const ResetPassword = () => {
                     if(localStorage){
 
                         setTimeout(() => {            
-                            localStorage.clear           
+                            localStorage.clear()           
                           }, 60000 );
             
                     }   

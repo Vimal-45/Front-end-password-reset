@@ -12,7 +12,7 @@ const SignIn = () => {
         myRef.current.focus()
         if(localStorage){
             setTimeout(() => {            
-                localStorage.clear           
+                localStorage.clear()           
               }, 60000 );
 
         }   
