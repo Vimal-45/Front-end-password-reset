@@ -67,7 +67,7 @@ const SignUp = () => {
                 onClick={handleSubmit}
                 className="btns"> SUBMIT </button>
             <Link style={{ textAlign: 'center', display: 'block', marginTop: '5px' }}
-                to={'/signin'}> SIGN IN </Link>
+                to={'/'}> SIGN IN </Link>
         </div>
         
         </>
