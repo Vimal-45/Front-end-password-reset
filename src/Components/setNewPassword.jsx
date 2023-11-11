@@ -15,17 +15,18 @@ const SetNewPassword = () => {
 
 
     useEffect(() => {
-            
+        
         if (mailString.get("string") !== localString) {
             alert('The Password Reset Link has Expired')
             navigate('/forget-pass');
 
         }
-        setTimeout(() => {            
-            localStorage.clear('STRING')           
-          }, 90000 );
+        myRef.current.focus()
+        // setTimeout(() => {            
+        //     localStorage.clear('STRING')           
+        //   }, 90000 );
 
-          myRef.current.focus()
+          
 
     }, []);
        
@@ -39,7 +40,7 @@ const SetNewPassword = () => {
         } else {
             
         if(password !== confirmPassword){ alert('password not match') }
-        if(confirmPassword.length>6){ return alert('Password should have minimum FIVE charactor')}
+        if(password.length > 6){ return alert('Password should have minimum FIVE charactor')}
 
         axios.post('https://password-reset-5gb9.onrender.com/api/user/reset-password', { string: localString, password: confirmPassword })
         .then((res) => {
