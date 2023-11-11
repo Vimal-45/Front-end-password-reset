@@ -26,14 +26,11 @@ const ResetPassword = () => {
                     localStorage.setItem('STRING', res.data.randomString);
                     localStorage.setItem('TOKEN', res.data.token);
                     if(!res.data.message){
-                        setLoading(false);
-                        return (
-                            <>
-                                <h1>Sending Link.....</h1>
-                            </>
-                        )
+                        setLoading(false)                        
+                    }else{
+                        navigate('/')
+                        alert(res.data.message)                    
                     }
-                    alert(res.data.message)                    
                     // window.close();
                     if(localStorage){
 
@@ -70,7 +67,7 @@ const ResetPassword = () => {
                     className="btns">
                     SEND LINK </button> <br />
 
-                    {loading && <p>Sending Link...</p>}
+                    {loading && <h1>Sending Link...</h1>}
                 <Link style={{ textAlign: 'center', display: 'block', marginTop: '5px' }}
                     to={'/'}> SIGN IN </Link>
 
