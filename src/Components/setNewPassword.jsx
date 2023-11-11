@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 
 const SetNewPassword = () => {
     const navigate = useNavigate();
-    const { mailString } = useParams();
+    const  [mailString] = useSearchParams()
     const [password, setPassword] = useState('');
     const [confirmPassword, setConPassword] = useState('');
     const localString = localStorage.getItem('STRING')
@@ -15,15 +15,15 @@ const SetNewPassword = () => {
 
 
     useEffect(() => {
-        
-        if (mailString !== localString) {
+            
+        if (mailString.get("string") !== localString) {
             alert('The Password Reset Link has Expired')
             navigate('/forget-pass');
 
         }
-        setTimeout(() => {            
-            localStorage.clear('STRING')           
-          }, 60000 );
+        // setTimeout(() => {            
+        //     localStorage.clear('STRING')           
+        //   }, 60000 );
 
           myRef.current.focus()
 

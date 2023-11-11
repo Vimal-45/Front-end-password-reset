@@ -14,7 +14,7 @@ const App = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/" element={<SignIn />} />
         <Route path="/forget-pass" element={<ResetPassword />} />
-        <Route path="/reset/:mailString" element={<SetNewPassword />} />
+        <Route path="/reset" element={<SetNewPassword />} />
       </Routes>
     </div>
   );
