@@ -39,7 +39,7 @@ const SetNewPassword = () => {
         } else {
             
         if(password !== confirmPassword){ alert('password not match') }
-        if(password.length>6){ alert('Password should have minimum FIVE letter or numbers ')}
+        if(confirmPassword.length>6){ return alert('Password should have minimum FIVE charactor')}
 
         axios.post('https://password-reset-5gb9.onrender.com/api/user/reset-password', { string: localString, password: confirmPassword })
         .then((res) => {

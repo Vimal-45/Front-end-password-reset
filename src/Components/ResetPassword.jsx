@@ -67,7 +67,7 @@ const ResetPassword = () => {
                     className="btns">
                     SEND LINK </button> <br />
 
-                    {loading && <h1>Sending Link...</h1>}
+                    {loading && <h1>Link sending ...</h1>}
                 <Link style={{ textAlign: 'center', display: 'block', marginTop: '5px' }}
                     to={'/'}> SIGN IN </Link>
 
