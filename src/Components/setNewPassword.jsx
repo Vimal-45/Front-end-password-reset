@@ -24,7 +24,7 @@ const SetNewPassword = () => {
 
         setTimeout(() => {            
             localStorage.clear('STRING')           
-          }, 90000 );
+          }, 120000 );
 
         myRef.current.focus()
 
@@ -43,8 +43,8 @@ const SetNewPassword = () => {
             if (password !== confirmPassword) {
                 alert('password not match')
             } else
-                if (password.length < 6) {
-                    console.log(password.length);
+                if (password.length < 5) {
+                    
                     return alert('Password should have minimum FIVE charactor')
                 } else {
 
@@ -100,7 +100,7 @@ const SetNewPassword = () => {
                 <button onClick={handleSubmit} className="btns">
                     CHANGE PASSWORD
                 </button>
-                <h4 style={{ color: 'orange' }} >Password need minimum <b></b>FIVE letter or numbers</h4>
+                <h4 style={{ color: 'orange' }} >Password need minimum <b> FIVE </b> letter or numbers</h4>
             </div>
         </div>
     );
