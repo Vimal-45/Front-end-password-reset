@@ -22,9 +22,9 @@ const SetNewPassword = () => {
 
         }
 
-        // setTimeout(() => {            
-        //     localStorage.clear('STRING')           
-        //   }, 90000 );
+        setTimeout(() => {            
+            localStorage.clear('STRING')           
+          }, 90000 );
 
         myRef.current.focus()
 

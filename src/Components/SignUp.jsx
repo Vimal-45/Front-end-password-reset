@@ -10,14 +10,7 @@ const SignUp = () => {
     const myRef = useRef() 
 
     useEffect(()=>{
-        myRef.current.focus()
-        if(localStorage){
-
-            setTimeout(() => {            
-                localStorage.clear()           
-              }, 60000 );
-
-        }        
+        myRef.current.focus()         
 
     },[])
 
