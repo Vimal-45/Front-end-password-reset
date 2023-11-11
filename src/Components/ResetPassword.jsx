@@ -23,6 +23,13 @@ const ResetPassword = () => {
 
                     localStorage.setItem('STRING', res.data.randomString);
                     localStorage.setItem('TOKEN', res.data.token);
+                    if(!res.data.message){
+                        return (
+                            <>
+                                <h1>Loading.....</h1>
+                            </>
+                        )
+                    }
                     alert(res.data.message)                    
                     // window.close();
                     if(localStorage){
