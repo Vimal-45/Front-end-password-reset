@@ -69,6 +69,8 @@ const ResetPassword = () => {
                     onClick={handleSubmit}
                     className="btns">
                     SEND LINK </button> <br />
+
+                    {loading && <p>Sending Link...</p>}
                 <Link style={{ textAlign: 'center', display: 'block', marginTop: '5px' }}
                     to={'/'}> SIGN IN </Link>
 
