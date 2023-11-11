@@ -23,7 +23,7 @@ const SetNewPassword = () => {
         }
         setTimeout(() => {            
             localStorage.clear('STRING')           
-          }, 60000 );
+          }, 90000 );
 
           myRef.current.focus()
 
@@ -37,7 +37,9 @@ const SetNewPassword = () => {
          navigate('/forget-pass')
         
         } else {
+            
         if(password !== confirmPassword){ alert('password not match') }
+        if(password.length>6){ alert('Password should have minimum FIVE letter or numbers ')}
 
         axios.post('https://password-reset-5gb9.onrender.com/api/user/reset-password', { string: localString, password: confirmPassword })
         .then((res) => {
@@ -85,10 +87,11 @@ const SetNewPassword = () => {
                     }}
                     className="inputs"
                     type="password"
-                />
+                />                
                 <button onClick={handleSubmit} className="btns">
                     CHANGE PASSWORD
                 </button>
+                <h4 style={{color:'orange'}} >Password need minimum <b></b>FIVE letter or numbers</h4>
             </div>
         </div>
     );
