@@ -40,7 +40,7 @@ const SetNewPassword = () => {
         } else {
             
         if(password !== confirmPassword){ alert('password not match') }
-        if(password.length > 6){ 
+        if(password.length < 6){ 
             console.log(password.length);
             return alert('Password should have minimum FIVE charactor')}
 
