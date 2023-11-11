@@ -53,7 +53,7 @@ const SetNewPassword = () => {
 
                             if (res.data.message === 'password updated sucessfully') {
 
-                                // navigate('/');
+                                navigate('/');
                                 alert('Password Updated.');
 
                             } else {
