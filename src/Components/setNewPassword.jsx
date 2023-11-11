@@ -48,8 +48,8 @@ const SetNewPassword = () => {
         .then((res) => {
                 
                 if (res.data.message === 'password updated sucessfully') {
-                    localStorage.clear('STRING')
-                    navigate('/');
+                   
+                    // navigate('/');
                     alert('Password Updated.');
 
                 } else {
