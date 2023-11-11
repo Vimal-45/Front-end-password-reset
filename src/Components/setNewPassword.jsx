@@ -16,11 +16,11 @@ const SetNewPassword = () => {
 
     useEffect(() => {
             
-        if (mailString.get("string") !== localString) {
-            alert('The Password Reset Link has Expired')
-            navigate('/forget-pass');
+        // if (mailString.get("string") !== localString) {
+        //     alert('The Password Reset Link has Expired')
+        //     navigate('/forget-pass');
 
-        }
+        // }
         // setTimeout(() => {            
         //     localStorage.clear('STRING')           
         //   }, 60000 );
