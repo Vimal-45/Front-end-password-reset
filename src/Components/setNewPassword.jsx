@@ -21,12 +21,12 @@ const SetNewPassword = () => {
             navigate('/forget-pass');
 
         }
-        myRef.current.focus()
+       
         // setTimeout(() => {            
         //     localStorage.clear('STRING')           
         //   }, 90000 );
 
-          
+        myRef.current.focus()
 
     }, []);
        
@@ -40,7 +40,9 @@ const SetNewPassword = () => {
         } else {
             
         if(password !== confirmPassword){ alert('password not match') }
-        if(password.length > 6){ return alert('Password should have minimum FIVE charactor')}
+        if(password.length > 6){ 
+            console.log(password.length);
+            return alert('Password should have minimum FIVE charactor')}
 
         axios.post('https://password-reset-5gb9.onrender.com/api/user/reset-password', { string: localString, password: confirmPassword })
         .then((res) => {
